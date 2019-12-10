@@ -1,0 +1,45 @@
+body{
+    margin: 0 auto;
+    max-width: 75em;
+    background-color: #eaeaea;
+}
+
+.headline{
+    margin-top: 15px;
+    text-align: center;
+}
+
+#searchbar{
+    position: relative;
+    left: 35%;
+    border-radius: 25px;
+    text-align: center;
+    width: 35em;
+    height: 5em;
+}
+
+.pictureframes{
+    height: auto;
+    background-color: #afafaf;
+    padding: 20px 4px;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    border-radius: 3px;
+}
+
+.pic{
+    background-color: #cccccc;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: auto;
+    text-align: center;
+    max-width: 70em;
+    border-radius: 5px;
+}
+
+.picsize{
+    max-width: 70em;
+}
