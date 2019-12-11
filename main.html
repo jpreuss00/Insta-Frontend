@@ -1,59 +1,88 @@
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
 
-  <title>The Insta Search Machine</title>
-  <meta name="description" content="Insta Friends">
-  <meta name="author" content="Joshua Preuß">
+    <title>The Insta Search Machine</title>
+    <meta name="description" content="Insta Friends">
+    <meta name="author" content="Joshua Preuß">
 
-  <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
 
 </head>
 
 <body>
-    <div class = "headline">
-    <h1>Insta Friends</h1>
-    <p>The easiest way to use Instagram</p>
+    <div class="headline">
+        <h1 class="headline__heading">Insta Friends</h1>
+        <p class="headline__subheading">The easiest way to use Instagram</p>
     </div>
 
     <br>
 
-    <nav>
-        <input type = "text" id = "searchbar" placeholder = "search for tags...">
+    <nav class="search">
+        <input type="text" class="search__bar" placeholder="search for tags...">
     </nav>
 
-    <br> 
-    
-    <div class = "pictureframes">
-        <article class = "pic">
-            <p>xXx.Marsil_Alashkar.xXx</p>
-            <img class = "picsize" src = "Pic3.jpg" alt = "This is a picture. ">
+    <br>
+
+    <div class="postlist">
+
+        <article class="post">
+
+            <div class="post__header">
+                xXx.Marsil_Alashkar.xXx
+            </div>
+
+            <img class="post__picture" src="Pic3.jpg" alt="This is a picture.">
+
             <br>
-            <span>27 Likes</span>
-            <span>#finally#happy#handy</span>
-        </article>
 
-        <br>   
+            <div class="post__footer">
+                <span class="likes">27 Likes</span>
+                <span class="hashtags">#finally#happy#handy</span>
+            </div>
 
-        <article class = "pic">
-                <p>Name</p>
-                <img src = "Pic1.jpg" alt = "This is a picture. ">
-                <br>
-                <span>Likes</span>
-                <span>Tags</span>
         </article>
 
         <br>
 
-        <article class = "pic">
-                    <p>Name</p>
-                    <img src = "Pic2.jpg" alt = "This is a picture. ">
-                    <br>
-                    <span>Likes</span>
-                    <span>Tags</span>
-        </article>    
+        <article class="post">
+
+            <div class="post__header">
+                Name
+            </div>
+
+            <img class="post__picture" src="Pic1.jpg" alt="This is a picture.">
+
+            <br>
+
+            <div class="post__footer">
+                <span class="likes">Likes</span>
+                <span class="hashtags">Tags</span>
+            </div>
+
+        </article>
+
+        <br>
+
+        <article class="post">
+
+            <div class="post__header">
+                Name
+            </div>
+
+            <img class="post__picture" src="Pic2.jpg" alt="This is a picture.">
+
+            <br>
+
+            <div class="post__footer">
+                <span class="likes">Likes</span>
+                <span class="hashtags">Tags</span>
+            </div>
+
+        </article>
     </div>
 
-
 </body>
+
 </html>

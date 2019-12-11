@@ -1,15 +1,21 @@
-body{
+body {
     margin: 0 auto;
     max-width: 75em;
     background-color: #eaeaea;
 }
 
-.headline{
+.headline {
     margin-top: 15px;
     text-align: center;
 }
 
-#searchbar{
+.headline__heading {}
+
+.headline__subheading {}
+
+.search {}
+
+.search__bar {
     position: relative;
     left: 35%;
     border-radius: 25px;
@@ -18,7 +24,7 @@ body{
     height: 5em;
 }
 
-.pictureframes{
+.postlist {
     height: auto;
     background-color: #afafaf;
     padding: 20px 4px;
@@ -28,7 +34,7 @@ body{
     border-radius: 3px;
 }
 
-.pic{
+.post {
     background-color: #cccccc;
     margin-left: auto;
     margin-right: auto;
@@ -40,6 +46,14 @@ body{
     border-radius: 5px;
 }
 
-.picsize{
+.post__header {}
+
+.post__picture {
     max-width: 70em;
 }
+
+.post_footer {}
+
+.likes {}
+
+.hashtags {}
