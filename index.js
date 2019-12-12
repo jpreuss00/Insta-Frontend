@@ -1,42 +1,15 @@
-class Model {
-    constructor() {
-        var p1 = new Post();
-        p1.imgurl = "www.google.com";
-        p1.hashtags = ["#sport", "#fun"];
-        var p2 = new post();
-        p1.imgurl = "www.google.com";
-        p1.hashtags = ["#nature", "#nofilter"];
-        var p3 = new Post();
-        p1.imgurl = "www.google.com";
-        p1.hashtags = ["#globalwarming", "#ice"];
+import Model from "./model";
+import View from "./view";
+import Controller from "./controller";
 
-        this.posts = [p1, p2, p3];
-        this.filteredPosts = [];
-    }
-    filterByTag(tag) {
-        this.filteredPosts = [];
-        for (i = 0; i < this.posts.length; i++) {
-            var post = this.posts[i];
-            if (post.hasTag(tag)) {
-                this.filteredPosts.push(post);
-            }
-        }
-    }
-}
+var m = new Model();
+var v = new View(m);
+var controller = new Controller(m, v);
 
-class Post {
-    constructor() {
-        this.imgurl = "";
-        this.username = "";
-        this.likes = 0;
-        this.hashtags = [];
-    }
-    hasTag(tag) {
-        for (i = 0; i < this.hashtags.length; i++) {
-            if (hashtags[i] == tag) {
-                return true;
-            }
-        }
-        return false;
-    }
-}
+var addButton = document.getElementById("search__button");
+addButton.addEventListener("click", (ev) => {
+    ev.preventDefault();
+
+    var input = document.getElementById("search__bar").value;
+    controller.searchForTag(input);
+});
