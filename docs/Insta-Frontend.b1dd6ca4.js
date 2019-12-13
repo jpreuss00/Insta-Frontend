@@ -9,4 +9,4 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{}],"Focm":[function(require,module,exports) {
 "use strict";var e=a(require("./InstagramModel")),t=a(require("./InstagramView")),r=a(require("./InstagramController"));function a(e){return e&&e.__esModule?e:{default:e}}var n=new e.default,u=new t.default(n),l=new r.default(n,u),d=document.getElementById("search__button");d.addEventListener("click",function(e){e.preventDefault();var t=document.getElementById("search__bar").value;l.searchForTag(t)});
 },{"./InstagramModel":"Lna8","./InstagramView":"rHtN","./InstagramController":"o3k7"}]},{},["Focm"], null)
-//# sourceMappingURL=/Insta-Frontend.b1dd6ca4.js.map
+//# sourceMappingURL=Insta-Frontend.b1dd6ca4.js.map
