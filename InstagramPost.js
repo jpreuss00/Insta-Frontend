@@ -1,10 +1,10 @@
-class Post {
+export default class InstagramPost {
     constructor() {
         this.imgurl = "";
         this.username = "";
         this.likes = 0;
         this.hashtags = [];
-        console.log("Post");
+        console.log("InstagramPost");
     }
     hasTag(tag) {
         for (var i = 0; i < this.hashtags.length; i++) {
@@ -15,5 +15,3 @@ class Post {
         return false;
     }
 }
-
-export default Post;

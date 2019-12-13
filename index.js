@@ -1,15 +1,15 @@
-import Model from "./model";
-import View from "./view";
-import Controller from "./controller";
+import InstagramModel from "./InstagramModel";
+import InstagramView from "./InstagramView";
+import InstagramController from "./InstagramController";
 
-var m = new Model();
-var v = new View(m);
-var controller = new Controller(m, v);
+var InstaModel = new InstagramModel();
+var InstaView = new InstagramView(InstaModel);
+var InstaController = new InstagramController(InstaModel, InstaView);
 
 var addButton = document.getElementById("search__button");
 addButton.addEventListener("click", (ev) => {
     ev.preventDefault();
 
     var input = document.getElementById("search__bar").value;
-    controller.searchForTag(input);
+    InstaController.searchForTag(input);
 });
