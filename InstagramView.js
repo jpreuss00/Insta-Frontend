@@ -10,10 +10,8 @@ export default class InstagramView {
         while (container.firstChild) {
             container.removeChild(container.firstChild);
         }
-
-        for (var i = 0; i < this.model.filteredPosts.length; i++) {
-            var shownPost = this.model.filteredPosts[i];
-
+        for(var shownPost of this.model.filteredPosts){
+            
             var newShownPost = document.createElement("article");
             newShownPost.setAttribute("class", "post")
 

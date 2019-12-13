@@ -258,27 +258,46 @@ function () {
         container.removeChild(container.firstChild);
       }
 
-      for (var i = 0; i < this.model.filteredPosts.length; i++) {
-        var shownPost = this.model.filteredPosts[i];
-        var newShownPost = document.createElement("article");
-        newShownPost.setAttribute("class", "post");
-        var newShownHeader = document.createElement("div");
-        newShownHeader.setAttribute("class", "post__header");
-        newShownHeader.innerHTML = shownPost.username;
-        var newShownPic = document.createElement("img");
-        var newShownPicSrc = shownPost.imgurl;
-        newShownPic.setAttribute("src", newShownPicSrc);
-        newShownPic.setAttribute("class", "post__picture");
-        var newShownFooter = document.createElement("div");
-        newShownFooter.setAttribute("class", "post__footer");
-        newShownFooter.innerHTML = shownPost.hashtags + " ";
-        var newShownBreak = document.createElement("div");
-        newShownBreak.innerHTML = "<br/>";
-        newShownPost.appendChild(newShownHeader);
-        newShownPost.appendChild(newShownPic);
-        newShownPost.appendChild(newShownFooter);
-        container.appendChild(newShownPost);
-        container.appendChild(newShownBreak);
+      var _iteratorNormalCompletion = true;
+      var _didIteratorError = false;
+      var _iteratorError = undefined;
+
+      try {
+        for (var _iterator = this.model.filteredPosts[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+          var shownPost = _step.value;
+          var newShownPost = document.createElement("article");
+          newShownPost.setAttribute("class", "post");
+          var newShownHeader = document.createElement("div");
+          newShownHeader.setAttribute("class", "post__header");
+          newShownHeader.innerHTML = shownPost.username;
+          var newShownPic = document.createElement("img");
+          var newShownPicSrc = shownPost.imgurl;
+          newShownPic.setAttribute("src", newShownPicSrc);
+          newShownPic.setAttribute("class", "post__picture");
+          var newShownFooter = document.createElement("div");
+          newShownFooter.setAttribute("class", "post__footer");
+          newShownFooter.innerHTML = shownPost.hashtags + " ";
+          var newShownBreak = document.createElement("div");
+          newShownBreak.innerHTML = "<br/>";
+          newShownPost.appendChild(newShownHeader);
+          newShownPost.appendChild(newShownPic);
+          newShownPost.appendChild(newShownFooter);
+          container.appendChild(newShownPost);
+          container.appendChild(newShownBreak);
+        }
+      } catch (err) {
+        _didIteratorError = true;
+        _iteratorError = err;
+      } finally {
+        try {
+          if (!_iteratorNormalCompletion && _iterator.return != null) {
+            _iterator.return();
+          }
+        } finally {
+          if (_didIteratorError) {
+            throw _iteratorError;
+          }
+        }
       }
     }
   }]);
@@ -373,7 +392,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50826" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58269" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
